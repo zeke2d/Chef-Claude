@@ -1,6 +1,12 @@
+import React from "react"
+
 export default function Main() {
 
-    const ingredients = ["Chicken", "Oregano", "Tomatoes"]
+    /**
+     when the user enters a new ingredient and submits the form, 
+     it adds that new ingredient to our list!
+     */
+    const [ingredients, setIngredients] = React.useState(["old Chicken", "old Oregano", "old Tomatoes"])
 
     const ingredientsListItems = ingredients.map(ingredient => (
         <li key={ingredient}>{ingredient}</li>
@@ -11,6 +17,7 @@ export default function Main() {
         event.preventDefault()
         const formData = new FormData(event.currentTarget)
         const newIngredient = formData.get("ingredient")
+        setIngredients(prevIngredients => [...prevIngredients, newIngredient])
     }
 
     return (
