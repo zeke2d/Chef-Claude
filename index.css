@@ -148,4 +148,25 @@ ul.ingredients-list > li {
     height: auto;
     right: 60px;
     top: 80px;
+    will-change: transform; /* enable hardware acceleration */
+    image-rendering: crisp-edges; /* sharper rendering */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5px); /* move up higher */
+    }
+    50% {
+        transform: translateY(0); /* return to original position */
+    }
+    75% {
+        transform: translateY(-5px); /* move up again */
+    }
+}
+
+.bounce {
+    animation: bounce 3s linear; /* faster and consistent timing */
 }
