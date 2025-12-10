@@ -73,7 +73,7 @@ main {
 }
 
 ul.ingredients-list {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
 }
 
 ul.ingredients-list > li {
@@ -169,4 +169,37 @@ ul.ingredients-list > li {
 
 .bounce {
     animation: bounce 3s linear; /* faster and consistent timing */
+}
+
+.gif-quote-container {
+    display: flex;
+    flex-direction: column; /* stack the GIF and quote vertically */
+    align-items: center; 
+    margin-top: 40px; 
+}
+
+#chef-sanji-cooking {
+    margin-bottom: 10px;
+    border-radius: 8px; 
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+#chef-sanji-quote {
+    text-align: center;
+    font-style: italic;
+    font-weight: 500;
+    background: repeating-linear-gradient(
+        to right,
+        #9e1d1f 0%, #f7a756 33%, #f8d433 66%, 
+        #9e1d1f 100%
+    ); 
+    -webkit-background-clip: text; /* For WebKit/Blink browsers */
+    -webkit-text-fill-color: transparent; /* For WebKit/Blink browsers */
+    color: transparent; /* Fallback for non-WebKit browsers */
 }
