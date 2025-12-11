@@ -1,14 +1,14 @@
 import React from "react"
 import IngredientsList from "./components/IngredientsList"
-import ClaudeRecipe from "./components/ClaudeRecipe"
-import { getRecipeFromMistral } from "./ai"
+import AIRecipe from "./components/AIRecipe"
+import { getRecipeFromLlama } from "./ai"
 
 export default function Main() {
     const [ingredients, setIngredients] = React.useState([])
     const [recipe, setRecipe] = React.useState("")
 
     async function getRecipe() {
-        const recipeMarkdown = await getRecipeFromMistral(ingredients)
+        const recipeMarkdown = await getRecipeFromLlama(ingredients)
         setRecipe(recipeMarkdown)
     }
 
@@ -28,7 +28,7 @@ export default function Main() {
             <form action={addIngredient} className="add-ingredient-form">
                 <input
                     type="text"
-                    placeholder="e.g. oregano"
+                    placeholder="add at least three ingredients"
                     aria-label="Add ingredient"
                     name="ingredient"
                 />
@@ -43,7 +43,7 @@ export default function Main() {
                 />
             }
 
-            {recipe && <ClaudeRecipe recipe={recipe} />}
+            {recipe && <AIRecipe recipe={recipe} />}
         </main>
     )
 }

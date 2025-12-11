@@ -33,7 +33,7 @@ export default function IngredientsList(props) {
             {props.ingredients.length >= 3 && <div className="get-recipe-container">
                 <div>
                     <h3>Ready for a recipe?</h3>
-                    <p>Generate a recipe from your list of ingredients.</p>
+                    <p>Get a recipe from your list of ingredients.</p>
                 </div>
                 <button onClick={() => { 
                     props.getRecipe(); 

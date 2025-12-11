@@ -1,6 +1,6 @@
 {
-  "name": "Scrim-s06ipeh",
-  "description": "https://scrimba.com/learn-react-c0e/~0zwk",
+  "name": "Chef Sunny",
+  "description": "React State project. Suggests recipes based on user-provided ingredients, using the Llama model from Hugging Face.",
   "scripts": {
     "start": "vite",
     "dev": "vite",

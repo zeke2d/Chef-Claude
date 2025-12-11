@@ -1,10 +1,12 @@
 import Markdown from 'marked-react';
 import ChefSanjiCooking from '../assets/chef-sanji-cooking.gif';
 
-export default function ClaudeRecipe(props) {
+export default function AIRecipe(props) {
     return (
         <section className="suggested-recipe-container" aria-live="polite">
-            <h2>Zeee Chef Recommends:</h2>
+            <h2>
+                <span className="gradient-text">Chef Sunny</span> Recommends:
+            </h2>
             <Markdown>{props.recipe}</Markdown>
             <div className="gif-quote-container">
                 <img src={ChefSanjiCooking} id="chef-sanji-cooking" alt="Chef Sanji cooking GIF." />

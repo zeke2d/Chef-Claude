@@ -115,6 +115,15 @@ ul.ingredients-list > li {
     position: relative;
 }
 
+.gradient-text {
+    background: linear-gradient(to right, #9e1d1f, #f7a756, #f8d433); /* Same gradient as Header h1 */
+    -webkit-background-clip: text; /* For WebKit/Blink browsers */
+    -webkit-text-fill-color: transparent; /* For WebKit/Blink browsers */
+    color: transparent; /* Fallback for non-WebKit browsers */
+    display: inline-block; /* Ensures proper rendering */
+    padding-bottom: 3px;
+}
+
 .get-recipe-container h3 {
     font-size: 1.125rem;
     font-weight: 500;
