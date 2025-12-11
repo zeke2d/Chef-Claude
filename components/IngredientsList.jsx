@@ -1,4 +1,5 @@
-import ChefSanjiSticker from "../images/chef-sanji-sticker.png";
+import ChefSanjiSticker from "../assets/chef-sanji-sticker.png";
+import SanjiThemeSong from "../assets/sanji-theme-song.mp3";
 
 export default function IngredientsList(props) {
     const ingredientsListItems = props.ingredients.map(ingredient => (
@@ -20,6 +21,11 @@ export default function IngredientsList(props) {
         }
     }
 
+    function playThemeSong() {
+        const audio = new Audio(SanjiThemeSong); // create a new Audio object
+        audio.play(); 
+    }
+
     return (
         <section>
             <h2>Ingredients on hand:</h2>
@@ -29,7 +35,13 @@ export default function IngredientsList(props) {
                     <h3>Ready for a recipe?</h3>
                     <p>Generate a recipe from your list of ingredients.</p>
                 </div>
-                <button onClick={() => { props.getRecipe(); handleBounce(); }}>Get a recipe!</button>
+                <button onClick={() => { 
+                    props.getRecipe(); 
+                    handleBounce(); 
+                    playThemeSong(); 
+                }}>
+                    Get a recipe!
+                </button>
                 <img src={ChefSanjiSticker} id="chef-sanji-sticker" alt="A sticker of Chef Sanji."/>
             </div>}
         </section>

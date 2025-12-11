@@ -1,5 +1,5 @@
 import Markdown from 'marked-react';
-import ChefSanjiCooking from '../images/chef-sanji-cooking.gif';
+import ChefSanjiCooking from '../assets/chef-sanji-cooking.gif';
 
 export default function ClaudeRecipe(props) {
     return (
