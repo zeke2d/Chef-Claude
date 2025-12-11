@@ -238,3 +238,11 @@ ul.ingredients-list > li {
     -webkit-text-fill-color: transparent; /* For WebKit/Blink browsers */
     color: transparent; /* Fallback for non-WebKit browsers */
 }
+
+@media (max-width: 660px) {
+    #chef-sanji-quote {
+        min-width: auto; /* remove the fixed min-width */
+        font-size: 0.9rem; /* slightly smaller text to prevent wrapping */
+        padding: 0 10px; /* internal padding to prevent touching edges */
+    }
+}
