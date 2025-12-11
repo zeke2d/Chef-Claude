@@ -7,6 +7,7 @@ body {
     font-family: Libre Bodoni, sans-serif;
     font-weight: 700;
     background-color: #FAFAF8;
+    min-width: 600px;
 }
 
 header {
@@ -17,6 +18,7 @@ header {
     height: 80px;
     background-color: white;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+    min-width: 600px;
 }
 
 header > img {
