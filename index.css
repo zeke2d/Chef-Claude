@@ -81,6 +81,30 @@ ul.ingredients-list > li {
     line-height: 28px;
 }
 
+.ingredients-list {
+    list-style: none; /* removes default bullet point */
+    padding: 0;
+}
+
+.ingredient-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* gap between the "x" and the ingredient */
+}
+
+.delete-ingredient-button {
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: bold; 
+    cursor: pointer;
+    padding: 0;
+}
+
+.delete-ingredient-button:hover {
+    color: #9e1d1f;
+}
+
 .get-recipe-container {
     display: flex;
     justify-content: space-between;

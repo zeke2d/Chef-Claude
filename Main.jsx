@@ -17,6 +17,12 @@ export default function Main() {
         setIngredients(prevIngredients => [...prevIngredients, newIngredient])
     }
 
+    function deleteIngredient(ingredientToDelete) {
+        setIngredients(prevIngredients => 
+            prevIngredients.filter(ingredient => ingredient !== ingredientToDelete)
+        )
+    }
+
     return (
         <main>
             <form action={addIngredient} className="add-ingredient-form">
@@ -33,6 +39,7 @@ export default function Main() {
                 <IngredientsList
                     ingredients={ingredients}
                     getRecipe={getRecipe}
+                    deleteIngredient={deleteIngredient}
                 />
             }
 
