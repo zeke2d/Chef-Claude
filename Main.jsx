@@ -6,6 +6,9 @@ import { getRecipeFromLlama } from "./ai"
 export default function Main() {
     const [ingredients, setIngredients] = React.useState([])
     const [recipe, setRecipe] = React.useState("")
+    const recipeSection = React.useRef(null)
+    console.log(recipeSection)
+    
 
     async function getRecipe() {
         const recipeMarkdown = await getRecipeFromLlama(ingredients)
@@ -37,6 +40,7 @@ export default function Main() {
 
             {ingredients.length > 0 &&
                 <IngredientsList
+                    ref={recipeSection}
                     ingredients={ingredients}
                     getRecipe={getRecipe}
                     deleteIngredient={deleteIngredient}
